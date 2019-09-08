@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textFont" format="string" />
+    <attr name="text" format="string" />
+    <attr name="text_size" format="integer" />
+    <attr name="text_color" format="color" />
+    <attr name="background_color" format="color" />
+    <attr name="show_text" format="boolean" />
+    <attr name="show_icon" format="boolean" />
+    <attr name="icon_margin_left" format="dimension" />
+    <attr name="icon_margin_right" format="dimension" />
+    <attr name="icon_position" format="integer" />
+    <attr name="icon_image" format="reference" />
+    <attr name="text_bold" format="boolean" />
+
+    <declare-styleable name="FontedTextView">
+        <attr name="textFont" />
+    </declare-styleable>
+
+    <declare-styleable name="FontedEditText">
+        <attr name="textFont" />
+    </declare-styleable>
+
+    <declare-styleable name="FontedButton">
+        <attr name="textFont" />
+    </declare-styleable>
+
+    <declare-styleable name="FontedIconButton">
+
+        <attr name="show_text" />
+        <attr name="show_icon" />
+        <attr name="icon_margin_left" />
+        <attr name="icon_margin_right" />
+        <attr name="icon_position" />
+        <attr name="icon_image" />
+        <attr name="text_bold" />
+        <attr name="text" />
+        <attr name="text_color" />
+        <attr name="text_size" />
+        <attr name="background_color" />
+    </declare-styleable>
+
+    <declare-styleable name="CheckBoxTextView">
+        <attr name="marginRightOfCheckBox" format="dimension" />
+        <attr name="text" />
+        <attr name="checkbox_text_size" format="dimension" />
+        <attr name="labelClickEnabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MaterialSpinner">
+        <attr name="ms_baseColor" format="color"/>
+        <attr name="ms_highlightColor" format="color"/>
+        <attr name="ms_errorColor" format="color"/>
+        <attr name="ms_error" format="string"/>
+        <attr name="ms_hint" format="string"/>
+        <attr name="ms_hintColor" format="color"/>
+        <attr name="ms_hintTextSize" format="dimension"/>
+        <attr name="ms_floatingLabelText" format="string"/>
+        <attr name="ms_floatingLabelColor" format="color"/>
+        <attr name="ms_multiline" format="boolean"/>
+        <attr name="ms_nbErrorLines" format="integer"/>
+        <attr name="ms_typeface" format="string"/>
+        <attr name="ms_alignLabels" format="boolean"/>
+        <attr name="ms_thickness" format="dimension"/>
+        <attr name="ms_thickness_error" format="dimension"/>
+        <attr name="ms_arrowSize" format="dimension"/>
+        <attr name="ms_arrowColor" format="color"/>
+        <attr name="ms_enableFloatingLabel" format="boolean"/>
+        <attr name="ms_enableErrorLabel" format="boolean"/>
+        <attr name="ms_alwaysShowFloatingLabel" format="boolean"/>
+        <attr name="ms_isRtl" format="boolean"/>
+        <attr name="ms_hintView" format="reference"/>
+        <attr name="ms_dropDownHintView" format="reference"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="ClearableEditText">
+        <attr name="label_text" format="string"/>
+        <attr name="enable_label" format="boolean"/>
+        <attr name="label_id" format="reference"/>
+        <attr name="edittext_id" format="reference"/>
+        <attr name="error_label_id" format="reference"/>
+        <attr name="is_required" format="boolean"/>
+        <attr name="empty_error_text" format="string" />
+        <attr name="content_type" format="string"/>
+        <attr name="validate_content" format="boolean"/>
+        <attr name="invalid_content_error_message" format="string"/>
+        <attr name="enable_password_toggle" format="boolean"/>
+        <attr name="validation_pattern" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="FontedEditTextSpinner">
+        <attr name="dropDownDrawable" format="reference" />
+        <attr name="dropDownDrawableWidth" format="dimension" />
+        <attr name="dropDownDrawableHeight" format="dimension" />
+        <attr name="dropDownDrawableSpacing" format="dimension" />
+        <attr name="dropDownAnimStyle" format="reference" />
+        <attr name="dropDownAnchor" format="integer" />
+        <attr name="dropDownWidth" format="dimension" />
+        <attr name="dropDownHeight" format="dimension" />
+        <attr name="dropDownSelector" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SpinnerPreference">
+        <attr name="entries" />
+        <attr name="entryValues" />
+        <attr name="title" />
+        <attr name="summary" />
+    </declare-styleable>
+</resources>

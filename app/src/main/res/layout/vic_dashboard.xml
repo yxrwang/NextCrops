@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg2"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/soil_info_list"
+            android:layout_above="@+id/btn_live_inspection"/>
+
+
+    <com.arvis.nextcrops.ui.view.FontedButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/VicButton"
+        android:layout_alignParentBottom="true"
+        android:text="@string/btn_live_inspection"
+        android:id="@+id/btn_live_inspection"/>
+
+     <include layout="@layout/progress_view" android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splash_background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"/>
+
+    <com.arvis.nextcrops.ui.view.FontedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_location"
+        android:id="@+id/txt_selection_location"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/btn_vic"
+        app:textFont="@string/font_bold"/>
+
+    <com.arvis.nextcrops.ui.view.FontedButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_vic"
+        android:id="@+id/btn_vic"
+        android:layout_above="@+id/btn_queensland"
+        style="@style/VicButton"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"/>
+
+    <com.arvis.nextcrops.ui.view.FontedButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_queensland"
+        android:id="@+id/btn_queensland"
+        android:layout_above="@+id/btn_auto_detect_location"
+        style="@style/QueensLandButton"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="8dp"/>
+
+    <com.arvis.nextcrops.ui.view.FontedButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_auto_detect_location"
+        android:layout_alignParentBottom="true"
+        android:text="@string/btn_auto_detect"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        app:textFont="@string/font_bold"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

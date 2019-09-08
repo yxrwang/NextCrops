@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/crops_suggest_panel"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:gravity="center_horizontal"
+        android:background="#FFFFFF">
+
+        <com.arvis.nextcrops.ui.view.FontedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_farm"
+            android:textColor="@color/colorQueensland"
+            app:textFont="@string/font_bold"/>
+
+        <com.arvis.nextcrops.ui.view.FontedTextView
+            android:id="@+id/land_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"/>
+
+        <com.arvis.nextcrops.ui.view.FontedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/suggested_crops"
+            android:textColor="@color/colorQueensland"
+            app:textFont="@string/font_awsome"/>
+
+        <com.arvis.nextcrops.ui.view.FontedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/suggested_crops"
+            android:textColor="@color/colorQueensland"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/soil_info_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/crops_suggest_panel"
+        />
+
+    <include
+        layout="@layout/progress_view"
+        android:visibility="gone" />
+
+</RelativeLayout>

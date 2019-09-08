@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.arvis.nextcrops.ui.view.FontedButton
+        android:id="@+id/btn_quit"
+        style="@style/VicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:text="@string/btn_cancel" />
+
+    <com.arvis.nextcrops.ui.view.FontedButton
+        android:id="@+id/btn_save_live_land"
+        style="@style/VicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:text="@string/btn_save" />
+
+    <fragment
+        android:id="@+id/camera_view"
+        android:name="com.arvis.nextcrops.ui.view.CameraScannerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/progress_location">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+        <com.arvis.nextcrops.ui.view.FontedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/progress_get_soil_info"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:id="@+id/info_panel"
+        android:visibility="invisible"
+        android:background="#CCFFFFFF">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/soil_class" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/soil_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/top_soil_texture" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/top_soil_texture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sub_soil_texture" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/sub_soil_texture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp" />
+
+        </LinearLayout>
+
+        <com.arvis.nextcrops.ui.view.FontedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clay_percentage"
+            app:textFont="@string/font_awsome"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/top_soil" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/clay_percentage_top_soil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stddev" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/clay_percentage_top_soil_stddev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subsoil" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/clay_percentage_sub_soil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stddev" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/clay_percentage_sub_soil_stddev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <com.arvis.nextcrops.ui.view.FontedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/ph"
+            app:textFont="@string/font_awsome"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/top_soil" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/ph_top_soil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stddev" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/ph_top_soil_stddev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subsoil" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/ph_sub_soil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stddev" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/ph_sub_soil_stddev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <com.arvis.nextcrops.ui.view.FontedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/organic_carbon"
+            app:textFont="@string/font_awsome"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/top_soil" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/oc_top_soil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stddev" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/oc_top_soil_stddev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subsoil" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/oc_sub_soil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stddev" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/oc_sub_soil_stddev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <com.arvis.nextcrops.ui.view.FontedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/electrical_conductivity"
+            app:textFont="@string/font_awsome" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/top_soil" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/ec_top_soil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stddev" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/ec_top_soil_stddev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subsoil" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/ec_sub_soil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stddev" />
+
+            <com.arvis.nextcrops.ui.view.FontedTextView
+                android:id="@+id/ec_sub_soil_stddev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+        <com.arvis.nextcrops.ui.view.FontedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/suggested_crops"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+
+        <com.arvis.nextcrops.ui.view.FontedTextView
+            android:id="@+id/suggested_crops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <com.arvis.nextcrops.ui.view.FontedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/label_location"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <com.arvis.nextcrops.ui.view.FontedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/live_location"
+        android:layout_toRightOf="@+id/label_location"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorPrimary"/>
+
+</RelativeLayout>

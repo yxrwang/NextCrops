@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorQueensland">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="128dp"/>
+
+    <com.arvis.nextcrops.ui.view.FontedButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/QueensLandMenuButton"
+        android:text="@string/menu_use_water_wise"
+        app:textFont="@string/font_awsome"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"/>
+
+    <com.arvis.nextcrops.ui.view.FontedButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/QueensLandMenuButton"
+        android:text="@string/request_soil_test"
+        app:textFont="@string/font_awsome"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"/>
+
+    <com.arvis.nextcrops.ui.view.FontedButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/QueensLandMenuButton"
+        android:text="@string/menu_planner"
+        app:textFont="@string/font_awsome"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"/>
+
+    <com.arvis.nextcrops.ui.view.FontedButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/QueensLandMenuButton"
+        app:textFont="@string/font_awsome"
+        android:text="@string/menu_order_crops_seeds"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"/>
+
+    <com.arvis.nextcrops.ui.view.FontedButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/QueensLandMenuButton"
+        android:text="@string/menu_switch_location"
+        app:textFont="@string/font_awsome"
+        android:id="@+id/menu_switch_state"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"/>
+
+</LinearLayout>
